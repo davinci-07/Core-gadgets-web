@@ -3,28 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Gadgets - অনলাইন গ্যাজেট শপ</title>
+    <title>Core Gadgets - Electronic shop</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; text-align: center; }
-        header { background: #111; color: #fff; padding: 20px; }
-        .product-card { background: #fff; max-width: 350px; margin: 30px auto; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; border-radius: 5px; }
-        .btn { background: #ff4757; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 15px; font-weight: bold; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; }
+        
+        /* Header */
+        header { background: #ffffff; padding: 15px 20px; border-bottom: 1px solid #eaeaea; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 22px; font-weight: bold; color: #ff3e6c; text-decoration: none; }
+        .cart-icon { background: #ff3e6c; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px; font-weight: bold; }
+
+        /* Banner */
+        .banner { background: linear-gradient(135deg, #ff3e6c, #ff6584); color: white; text-align: center; padding: 40px 20px; }
+        .banner h1 { font-size: 26px; margin-bottom: 10px; }
+        .banner p { font-size: 14px; opacity: 0.9; }
+
+        /* Products Section */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
+        .section-title { font-size: 20px; margin-bottom: 15px; font-weight: bold; border-left: 4px solid #ff3e6c; padding-left: 10px; }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { background: #fff; border-radius: 10px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        .product-title { font-size: 16px; font-weight: 600; margin-bottom: 5px; }
+        .product-price { color: #ff3e6c; font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+        .buy-btn { background: #222; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .buy-btn:hover { background: #ff3e6c; }
+
+        /* Order Form Section */
+        .order-section { background: #fff; margin: 30px auto; max-width: 600px; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .order-section h2 { text-align: center; margin-bottom: 20px; color: #222; font-size: 22px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .submit-btn { background: #ff3e6c; color: white; border: none; width: 100%; padding: 12px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; }
+        .submit-btn:hover { background: #e0325d; }
+
+        /* Footer */
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>Core Gadgets</h1>
-        <p>আপনার পছন্দের সেরা গ্যাজেটগুলো এখন এক ঠিকানায়!</p>
+        <a href="#" class="logo">Core Gadgets</a>
+        <div class="cart-icon">🛒 কার্ট (০)</div>
     </header>
 
-    <div class="product-card">
-        <h2>স্মার্ট ওয়াচ সিরিজ ৮</h2>
-        <p style="color: green; font-weight: bold;">মূল্য: ১,৫০০ টাকা</p>
-        <p>হাই কোয়ালিটি ডিসপ্লে এবং লং ব্যাটারি ব্যাকআপ। ক্যাশ অন ডেলিভারি সারা দেশে!</p>
-        <a href="tel:01700000000" class="btn">অর্ডার করতে কল করুন</a>
+    <!-- Banner -->
+    <div class="banner">
+        <h1>সেরা গ্যাজেট ও এক্সেসরিজ</h1>
+        <p>১০০% অরিজিনাল পণ্য এবং সারা দেশে ক্যাশ অন ডেলিভারি!</p>
     </div>
 
+    <!-- Main Products -->
+    <div class="container">
+        <div class="section-title">জনপ্রিয় পণ্যসমূহ</div>
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Smart Watch">
+                <div class="product-title">Ultra Smart Watch Series 8</div>
+                <div class="product-price">১,৫৫০ টাকা</div>
+                <button class="buy-btn" onclick="selectProduct('Ultra Smart Watch Series 8 - ১,৫৫০ টাকা')">অর্ডার করুন</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df" alt="Earbuds">
+                <div class="product-title">Pro Wireless Bluetooth Earbuds</div>
+                <div class="product-price">১,২০০ টাকা</div>
+                <button class="buy-btn" onclick="selectProduct('Pro Wireless Bluetooth Earbuds - ১,২০০ টাকা')">অর্ডার করুন</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90" alt="Headphone">
+                <div class="product-title">Wireless Gaming Headphone</div>
+                <div class="product-price">২,৩০০ টাকা</div>
+                <button class="buy-btn" onclick="selectProduct('Wireless Gaming Headphone - ২,৩০০ টাকা')">অর্ডার করুন</button>
+            </div>
+
+        </div>
+
+        <!-- Quick Order Form -->
+        <div class="order-section" id="orderFormBox">
+            <h2>দ্রুত অর্ডার করুন</h2>
+            <form onsubmit="handleOrder(event)">
+                <div class="form-group">
+                    <label>আপনার নাম:</label>
+                    <input type="text" id="custName" placeholder="সম্পূর্ণ নাম লিখুন" required>
+                </div>
+                <div class="form-group">
+                    <label>মোবাইল নম্বর:</label>
+                    <input type="tel" id="custPhone" placeholder="যেমন: 017xxxxxxxx" required>
+                </div>
+                <div class="form-group">
+                    <label>সিলেক্টেড পণ্য:</label>
+                    <input type="text" id="selectedProduct" value="কোনো পণ্য সিলেক্ট করা হয়নি" readonly style="background: #eee; color: #555;">
+                </div>
+                <div class="form-group">
+                    <label>পূর্ণ ঠিকানা:</label>
+                    <textarea id="custAddress" rows="3" placeholder="বাসা/রোড, থানা, জেলা" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">কনফার্ম অর্ডার</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; ২০২৬ Core Gadgets. সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        function selectProduct(productName) {
+            document.getElementById('selectedProduct').value = productName;
+            // Scroll down smoothly to order form
+            document.getElementById('orderFormBox').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const product = document.getElementById('selectedProduct').value;
+            
+            if(product === "কোনো পণ্য সিলেক্ট করা হয়নি") {
+                alert("দয়া করে প্রথমে যেকোনো একটি পণ্যের 'অর্ডার করুন' বাটনে ক্লিক করুন।");
+                return;
+            }
+
+            alert(`ধন্যবাদ ${name}! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। খুব শীঘ্রই আমরা আপনার ${phone} নম্বরে যোগাযোগ করব।`);
+            event.target.reset();
+            document.getElementById('selectedProduct').value = "কোনো পণ্য সিলেক্ট করা হয়নি";
+        }
+    </script>
 </body>
 </html>
